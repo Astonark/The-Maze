@@ -164,6 +164,6 @@ var Cell = /** @class */ (function () {
     };
     return Cell;
 }());
-var emaze = new Maze(500, 25, 25);
+var emaze = new Maze(1000, 55, 55);
 emaze.setup();
 emaze.draw();

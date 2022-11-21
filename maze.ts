@@ -8,8 +8,9 @@ class Maze {
     private size: number;
     private rows: number;
     private columns: number;
-    private grid: any = [];
-    private stack: any = [];
+    private grid: Array<Cell[]> = [];
+    private stack: Array<number> = [];
+
     constructor(size: number, rows: number, columns: number) {
         this.size = size;
         this.rows = rows;
@@ -81,7 +82,7 @@ class Cell {
         leftWall: true
     };
 
-    constructor(rowNum: number, colNum: number, parentGrid: number, parentSize: number) {
+    constructor(rowNum: number, colNum: number, parentGrid, parentSize: number) {
         this.rowNum = rowNum;
         this.colNum = colNum;
         this.parentGrid = parentGrid;
@@ -194,6 +195,6 @@ class Cell {
     }
 }
 
-let emaze = new Maze(500, 25, 25);
+let emaze = new Maze(1000, 55, 55);
 emaze.setup();
 emaze.draw();
